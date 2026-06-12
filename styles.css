@@ -1,0 +1,225 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #3b82f6;
+  --accent-dark: #2563eb;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #eef2ff 0%, var(--bg) 45%);
+  color: var(--text);
+}
+
+.app-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-header {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1.6fr 1fr;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+}
+
+.app-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.profile-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+}
+
+.profile-card strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.profile-card p {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+main {
+  display: grid;
+  gap: 24px;
+}
+
+.post-creator,
+.feed,
+.auth-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
+}
+
+.post-creator h2,
+.feed h2,
+.auth-panel h2 {
+  margin-top: 0;
+}
+
+.auth-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.auth-form {
+  display: grid;
+  gap: 12px;
+}
+
+.auth-form h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.auth-message {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  min-height: 1.3rem;
+}
+
+#postForm,
+#loginForm,
+#signupForm {
+  display: grid;
+  gap: 14px;
+}
+
+#loginForm input,
+#signupForm input,
+#postForm textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 1rem;
+  background: #fafbff;
+}
+
+#loginForm button,
+#signupForm button,
+#postForm button,
+.secondary-button {
+  width: fit-content;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 20px;
+  color: white;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.secondary-button {
+  margin-top: 14px;
+}
+
+#loginForm button:hover,
+#signupForm button:hover,
+#postForm button:hover,
+.secondary-button:hover {
+  opacity: 0.95;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.feed-container {
+  display: grid;
+  gap: 18px;
+}
+
+.post-card {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+  background: #ffffff;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.post-header strong {
+  font-size: 1rem;
+}
+
+.post-header time {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.post-content {
+  margin: 0 0 16px;
+  line-height: 1.75;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.like-button {
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.like-button:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.like-count {
+  color: var(--muted);
+}
+
+@media (max-width: 800px) {
+  .app-header {
+    grid-template-columns: 1fr;
+  }
+}

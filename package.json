@@ -1,0 +1,15 @@
+{
+  "name": "socialmedia-app",
+  "version": "1.0.0",
+  "description": "Social media platform with Express backend, SQLite database, and HTML/CSS/JS frontend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "sqlite3": "^5.1.6"
+  }
+}
